@@ -1,15 +1,15 @@
 import React from "react";
 import "./style.css";
-import ComponenteEj from './components/ComponenteEj';
+import Lista from './components/Lista';
+
 
 export default function App(){
   return (
     <div>
-      <h1>Hola (desde componente)</h1>;
-      <ComponenteEj icono=" :)"/>;
-      <ComponenteEj icono=" :("/>;
-      <ComponenteEj icono=" ;("/>;
-      <ComponenteEj icono=" ;*"/>;
+      <h1>Hola, estamos en diciembre </h1>;
+      <Lista titulo = "Componente 1" icono =":("/>;
+      <Lista titulo = "Componente 2" icono =":)"/>;
+      <Lista titulo = "Componente 3" icono =":*"/>;
     </div>
     );
 }
