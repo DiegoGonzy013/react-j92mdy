@@ -1,5 +1,5 @@
 import React from "react";
 
-export function ComponenteEj() {
+export default function ComponenteEj() {
   return <div>Mi primer componente</div>;
 }
