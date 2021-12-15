@@ -21,7 +21,7 @@ export default function ComponenteLista(props){
   }
 
  return (
-  <li className = {claseLista} value={prio}>
+  <li className = {claseLista} title={prio}>
     <input type="checkbox" />
     {props.texto}
   </li>
