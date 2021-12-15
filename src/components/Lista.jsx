@@ -3,16 +3,20 @@ import ComponenteLista from './ComponenteLista';
 
 export default function Lista(props) {
   const listaComponentes = [];
+
+  if (props.elementos !== undefined) {
   for (let i = 0; i < props.elementos.length; i++) {
-    listaComponentes.push(<ComponenteLista texto="Se trata de otro elemento posiblemente el siguiente " />);
+    listaComponentes.push(<ComponenteLista 
+      prioridad={props.elementos[i].prioridad}
+      done={props.elementos[i].done}
+      texto={props.elementos[i].texto} 
+      />);
+    }
   }
   return (
   <div>
   {props.titulo} - {props.icono}
     <ul>
-      <ComponenteLista texto="Elemento 1"/>
-      <ComponenteLista texto="Elemento 2"/>
-      <ComponenteLista texto="Elemento 3"/>
       {listaComponentes}
     </ul>
   </div>);

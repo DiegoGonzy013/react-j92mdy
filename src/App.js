@@ -4,9 +4,18 @@ import Lista from './components/Lista';
 
 
 export default function App(){
-  const elementos1 = ['Elemento (Comp) 1', 'Elemento (Comp) 2'];
-  const elementos2 = ['Elemento (Comp) 3', 'Elemento (Comp) 4',, 'Elemento (Comp) 5'];
-  const elementos3 = ['Elemento (Comp) 6'];
+  const elementos1 = [
+    {done: false, texto: 'Elemento (Comp) 1'}, 
+    {done: true, texto:'Elemento (Comp) 2'}
+  ];
+  const elementos2 = [
+    {prioridad: alta, done: false, texto:'Elemento (Comp) 3'},
+    {done: true, texto:'Elemento (Comp) 4'},
+    {done: true, texto:'Elemento (Comp) 5'}
+  ];
+  const elementos3 = [
+    {done: true, texto:'Elemento (Comp) 6'}
+  ];
   return (
     <div>
       <h1>Hola, estamos en diciembre </h1>;
