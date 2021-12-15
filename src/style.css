@@ -1,4 +1,10 @@
 h1, p {
   font-family: Lato;
-  color: orangered;
+  color: goldenrod;
+}
+div {
+ color: black;
+}
+ul{
+  color:darkgrey;
 }
