@@ -5,16 +5,16 @@ import Lista from './components/Lista';
 
 export default function App(){
   const elementos1 = [
-    {done: false, texto: 'Elemento (Comp) 1'}, 
-    {done: true, texto:'Elemento (Comp) 2'}
+    {prioridad:'alta', done: false, texto: 'Elemento (Comp) 1'}, 
+    {prioridad:'baja',done: true, texto:'Elemento (Comp) 2'}
   ];
   const elementos2 = [
-    {prioridad: alta, done: false, texto:'Elemento (Comp) 3'},
-    {done: true, texto:'Elemento (Comp) 4'},
-    {done: true, texto:'Elemento (Comp) 5'}
+    {prioridad: 'alta', done: false, texto:'Elemento (Comp) 3'},
+    {prioridad:'baja',done: true, texto:'Elemento (Comp) 4'},
+    {prioridad:'media',done: true, texto:'Elemento (Comp) 5'}
   ];
   const elementos3 = [
-    {done: true, texto:'Elemento (Comp) 6'}
+    {prioridad:'media',done: true, texto:'Elemento (Comp) 6'}
   ];
   return (
     <div>

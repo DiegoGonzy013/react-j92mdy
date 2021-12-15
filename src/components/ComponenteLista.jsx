@@ -10,7 +10,7 @@ export default function ComponenteLista(props){
     prio= 'alta';
   }else if (props.prioridad){
     prio='media';
-  }else if(props.prioridad){
+  }else if (props.prioridad){
     prio='baja';
   }
 
@@ -21,7 +21,7 @@ export default function ComponenteLista(props){
   }
 
  return (
-  <li className = {claseLista} /*atrib*/ ={prio}>
+  <li className = {claseLista} value={prio}>
     <input type="checkbox" />
     {props.texto}
   </li>
