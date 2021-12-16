@@ -1,5 +1,8 @@
-li.el-checked{
+li.el-done{
   font-weight: bold;
+}
+li.el-undone{
+  text-decoration:line-through;
 }
 li.alta {
   color: red;
