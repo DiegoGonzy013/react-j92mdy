@@ -18,6 +18,11 @@ export default function Lista(props) {
   {props.titulo} - {props.icono}
     <ul>
       {listaComponentes}
+      <li>
+        <input text="Texto" placeholder="Introduce texto"/>
+        <br/>
+      <button>Añadir</button>
+      </li>
     </ul>
   </div>);
 }
