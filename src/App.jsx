@@ -5,11 +5,11 @@ import Lista from './components/Lista';
 
 export default function App(){
   const elementos1 = [
-    {done: false, texto: 'Descomer', prioridad:'alta'}, 
-    {done: true, texto:'Comer'},
+    {texto: 'Descomer', prioridad:'alta'}, 
+    {texto:'Comer'},
   ];
   const elementos2 = [
-    {done: false, texto:'Aprender a programar'},
+    {texto:'Aprender a programar'},
     {texto:'Desprogramar kappa'},
     {texto:'Programacion', prioridad:'media'},
   ];
@@ -18,7 +18,7 @@ export default function App(){
   ];
   return (
     <div>
-      <h1>Hola, estamos en diciembre </h1>;
+      <h1>Lista de Tareas </h1>;
       <Lista titulo = "Tareas de casa" icono =":(" elementos={elementos1}/>;
       <Lista titulo = "Tareas de clase" icono =":)" elementos={elementos2}/>;
       <Lista titulo = "Pintar la casa" icono =":*" elementos={elementos3}/>;
