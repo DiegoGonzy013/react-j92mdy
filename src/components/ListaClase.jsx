@@ -1,9 +1,9 @@
 import React, {useState, useRef} from "react";
 import ComponenteListaClase from './ComponenteListaClase';
-
-export default function Lista(props) {
+class ListaClase
+Lista (props) {
   const listaInicial = [];
-
+  
   if (props.elementos !== undefined) {
   for (let i = 0; i < props.elementos.length; i++) {
     listaInicial.push(<ComponenteListaClase 

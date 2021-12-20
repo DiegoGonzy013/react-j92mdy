@@ -9,9 +9,7 @@ export default function App(){
     {texto:'Comer'},
   ];
   const elementos2 = [
-    {texto:'Aprender a programar'},
-    {texto:'Desprogramar kappa'},
-    {texto:'Programacion', prioridad:'media'},
+
   ];
   const elementos3 = [
     {done: true, texto:'Comprar pintura', prioridad:'media'},
