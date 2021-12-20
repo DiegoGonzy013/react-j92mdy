@@ -2,17 +2,19 @@ import React from "react";
 import ComponenteListaClase from './ComponenteListaClase';
 
 export default function Lista(props) {
-  const listaComponentes = [];
+  const listaInicial = [];
 
   if (props.elementos !== undefined) {
   for (let i = 0; i < props.elementos.length; i++) {
-    listaComponentes.push(<ComponenteListaClase 
+    listaInicial.push(<ComponenteListaClase 
       done={props.elementos[i].done}
       texto={props.elementos[i].texto}
       prioridad={props.elementos[i].prioridad} 
       />);
     }
   }
+  const [listaComponentes, setListaComponentes] = useState(listaInicial);
+
   const funcion= function addElement(){
     const newLista = listaComponentes.concat(
       <ComponenteListaClase done={false} texto ="Nueva tarea"/>
@@ -25,7 +27,7 @@ export default function Lista(props) {
     <ul>
       {listaComponentes}
       <li>
-        <input text="Texto" placeholder="Introduce texto"/>
+        <input type="Texto" placeholder="Introduce texto"/>
         <br/>
       <button>Añadir</button>
       </li>
