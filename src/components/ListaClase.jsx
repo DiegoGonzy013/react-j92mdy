@@ -1,9 +1,29 @@
 import React, {useState, useRef} from "react";
 import ComponenteListaClase from './ComponenteListaClase';
-class ListaClase
+class ListaClase extends React.Component{
+  const listaInicial = [];
+
+  if (props.elementos !== undefined) {
+  for (let i = 0; i < props.elementos.length; i++) {
+    listaInicial.push(<ComponenteListaClase 
+      done={props.elementos[i].done}
+      texto={props.elementos[i].texto}
+      prioridad={props.elementos[i].prioridad} 
+      />);
+    }
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      done={props.elementos[i].done}
+    };
+    this.prioridad={props.elementos[i].prioridad} 
+    this.texto={props.elementos[i].texto}
+  }
+}
 Lista (props) {
   const listaInicial = [];
-  
+
   if (props.elementos !== undefined) {
   for (let i = 0; i < props.elementos.length; i++) {
     listaInicial.push(<ComponenteListaClase 
