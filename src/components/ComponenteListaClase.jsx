@@ -1,40 +1,45 @@
-import React from "react";
+import React from 'react';
 
 import './componente-lista.css';
 
-class ComponenteListaClase extends React.Component{
-
-  constructor(props){
+class ComponenteListaClase extends React.Component {
+  constructor(props) {
     super(props);
-    this.done= props.done;
-    this.prioridad= props.prioridad;
+    this.state={};
+    this.done = props.done;
+    this.prioridad = props.prioridad;
     this.texto = props.texto;
+    this.setElementClass();
   }
 
+  setElementClass() {
+    this.claseLista = this.prioridad;
+    if (this.done) {
+      this.claseLista += ' el-done';
+    } else {
+      this.claseLista += ' el-undone';
+    }
+  }
 
-setElementClass(){
-  this.claseLista =this.prioridad;
-  if(this.done){
-    this.claseLista +=' el-done';
-  }else{
-    this.claseLista +=' el-undone';
+  setTaskStatus() {
+    this.done = !this.done;
+    setElementClass();
+  }
+ changeStatus(){
+   this.setState({done:!this.state.done});
+ }
+
+  render() {
+    return (
+      <li className={this.claseLista}>
+        <input type="checkbox" defaultCheked={this.state.done} onChange={this.chageStatus.bind(this)} />
+        {this.texto}
+      </li>
+    );
   }
 }
-
- setTaskStatus(){
-  this.done=!this.done;
-  setElementClass();
-  }
-render(){
- return (
-  <li className = {claseLista}>
-    <input type="checkbox"  /*onChange={setTaskStatus()}*//>
-    {this.texto}
-  </li>
- );}
-}
-
-ComponenteListaClase.defaultProps= {
+export default ComponenteListaClase;
+ComponenteListaClase.defaultProps = {
   prioridad: 'baja',
 };
 
