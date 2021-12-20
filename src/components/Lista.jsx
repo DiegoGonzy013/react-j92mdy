@@ -14,11 +14,11 @@ export default function Lista(props) {
     }
   }
   const [listaComponentes, setListaComponentes] = useState(listaInicial);
-  const valorTextInput= useRef();
+  const valorTextInput= useRef("");
 
   const funcion= function addElement(){
     const newLista = listaComponentes.concat(
-      <ComponenteListaClase done={false} texto ={valorTextInput}/>
+      <ComponenteListaClase done={false} texto ={valorTextInput.current.value}/>
     );
     setListaComponentes(newLista);
   }

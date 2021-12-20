@@ -1,7 +1,7 @@
-li.el-done{
+li.el-undone{
   font-weight: bold;
 }
-li.el-undone{
+li.el-done{
   text-decoration:line-through;
 }
 li.alta {
