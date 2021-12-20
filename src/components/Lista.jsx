@@ -15,7 +15,7 @@ export default function Lista(props) {
   }
   const funcion= function addElement(){
     const newLista = listaComponentes.concat(
-      <ComponenteListaClase donde={false} texto ="Nueva tarea"/>
+      <ComponenteListaClase done={false} texto ="Nueva tarea"/>
     );
     setListaComponentes(newLista);
   }
