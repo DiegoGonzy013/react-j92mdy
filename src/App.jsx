@@ -5,23 +5,23 @@ import Lista from './components/Lista';
 
 export default function App(){
   const elementos1 = [
-    {done: false, texto: 'Elemento (Comp) 1', prioridad:'alta'}, 
-    {done: true, texto:'Elemento (Comp) 2'},
+    {done: false, texto: 'Descomer', prioridad:'alta'}, 
+    {done: true, texto:'Comer'},
   ];
   const elementos2 = [
-    {done: false, texto:'Elemento (Comp) 3'},
-    {done: true, texto:'Elemento (Comp) 4'},
-    {done: true, texto:'Elemento (Comp) 5', prioridad:'media'},
+    {done: false, texto:'Aprender a programar'},
+    {done: true, texto:'Desprogramar kappa'},
+    {done: true, texto:'Programacion', prioridad:'media'},
   ];
   const elementos3 = [
-    {done: true, texto:'Elemento (Comp) 6', prioridad:'media'},
+    {done: true, texto:'Comprar pintura', prioridad:'media'},
   ];
   return (
     <div>
       <h1>Hola, estamos en diciembre </h1>;
-      <Lista titulo = "Componente 1" icono =":(" elementos={elementos1}/>;
-      <Lista titulo = "Componente 2" icono =":)" elementos={elementos2}/>;
-      <Lista titulo = "Componente 3" icono =":*" elementos={elementos3}/>;
+      <Lista titulo = "Tareas de casa" icono =":(" elementos={elementos1}/>;
+      <Lista titulo = "Tareas de clase" icono =":)" elementos={elementos2}/>;
+      <Lista titulo = "Pintar la casa" icono =":*" elementos={elementos3}/>;
     </div>
     );
 }
