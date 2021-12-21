@@ -7,8 +7,10 @@ class ListaClase extends React.Component{
     this.icono=props.icono;
     this.elementos=props.elementos;
     this.state={
-      listaInicial: [listaComponentes, setListaComponentes]
+      listaComponentes: this.listaInicial,
     }
+    this.valorTextInput= React.createRef();
+    this.valorPrioridad= React.createRef();
   }
   setElementos(){
     const listaInicial = [];
@@ -23,14 +25,11 @@ class ListaClase extends React.Component{
   }
 }
 addElemento(){
-  
-  const valorTextInput= useRef('');
-  const valorPrioridad= useRef('');
 
   const newLista = this.state.listaComponentes.concat(
     <ComponenteListaClase texto ={valorTextInput.current.value} prioridad={valorPrioridad.current.value} />
   );
-  setListaComponentes(newLista);
+  this.setState= ({listaComponentes: newLista});
 }
   render(){
     this.setElementos();
@@ -38,7 +37,7 @@ addElemento(){
       <div>
       {this.titulo} - {this.icono}
         <ul>
-          {this.listaComponentes}
+          {this.state.listaComponentes}
           <li>
             <input ref={this.valorTextInput} type="Texto" placeholder="Introduce texto"/>
             <br/>
@@ -47,7 +46,7 @@ addElemento(){
             <option value="media">Media</option> 
             <option value="baja">Baja</option> 
             </select>
-          <button onClick={this.addElemento()}>Añadir</button>
+          <button onClick={this.addElemento.bind(this)}>Añadir</button>
           </li>
         </ul>
       </div>);
