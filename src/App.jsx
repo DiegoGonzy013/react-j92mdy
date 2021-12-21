@@ -5,12 +5,14 @@ import ListaClase from './components/ListaClase';
 
 export default function App(){
   const elementos1 = [
-    {texto: 'Desayunar', prioridad:'alta'}, 
-    {texto:'Comer'},
+    {texto: 'Descomer', prioridad:'alta'}, 
+    {done: true ,texto:'Comer'},
+    {texto:'Ducharse', prioridad:'media'},
+    {texto:'Lavar la ropa'},
     {texto:'Limpiar', prioridad:'media'},
   ];
   const elementos2 = [
-
+    {texto:'Aprender JavaScript', prioridad:'alta'},
   ];
   const elementos3 = [
     {done: true, texto:'Pintura', prioridad:'media'},
