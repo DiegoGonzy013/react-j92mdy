@@ -32,7 +32,7 @@ addElemento(){
     texto ={this.valorTextInput.current.value} 
     prioridad={this.valorPrioridad.current.value} />
   );
-  this.setState ({listaComponentes: newLista});
+  this.setState({listaComponentes: newLista});
 }
   render(){
     this.setElementos();

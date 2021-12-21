@@ -14,6 +14,7 @@ export default function App(){
   ];
   const elementos3 = [
     {done: true, texto:'Comprar pintura', prioridad:'media'},
+    {done: true, texto:'Brochas'},
   ];
   return (
     <div>
