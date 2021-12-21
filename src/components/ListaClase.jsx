@@ -3,21 +3,23 @@ import ComponenteListaClase from './ComponenteListaClase';
 class ListaClase extends React.Component{
   constructor(props) {
     super(props);
-    this.done=props.done;
-    this.texto=props.texto
-    this.prioridad=props.prioridad
+    this.titulo= props.titulo;
+    this.icono=props.icono;
+    this.elementos=props.elementos;
   }
-  setElementos(){
+  setElementos(props){
     const listaInicial = [];
-  if (this.props.elementos !== undefined) {
+  if (this.elementos !== undefined) {
     for (let i = 0; i < this.props.elementos.length; i++) {
       listaInicial.push(<ComponenteListaClase 
-        done={props.elementos[i].done}
-        texto={props.elementos[i].texto}
-        prioridad={props.elementos[i].prioridad} 
+        done={this.elementos[i].done}
+        texto={this.elementos[i].texto}
+        prioridad={this.elementos[i].prioridad} 
       />);
     }
   }
+}
+addElemento(){
   const [listaComponentes, setListaComponentes] = useState(listaInicial);
   const valorTextInput= useRef('');
   const valorPrioridad= useRef('');
@@ -28,10 +30,10 @@ class ListaClase extends React.Component{
   setListaComponentes(newLista);
 }
   render(){
-
+    this.setElementos();
     return (
       <div>
-      {props.titulo} - {props.icono}
+      {this.titulo} - {this.icono}
         <ul>
           {listaComponentes}
           <li>
@@ -42,10 +44,10 @@ class ListaClase extends React.Component{
             <option value="media">Media</option> 
             <option value="baja">Baja</option> 
             </select>
-          <button onClick={setElement()}>Añadir</button>
+          <button onClick={this.addElemento()}>Añadir</button>
           </li>
         </ul>
       </div>);
   }
 }
-export default ComponenteListaClase;
+export default ListaClase;
