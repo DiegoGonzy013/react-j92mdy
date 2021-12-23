@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import ListaClase from './components/ListaClase';
-
+import Header from './components/Header';
 
 export default function App(){
   const elementos1 = [
@@ -21,6 +21,7 @@ export default function App(){
   ];
   return (
     <div>
+          <Header/>
       <h1>Lista de Tareas </h1>
       <ListaClase titulo = "Tareas de la casa" icono ="🏡" elementos={elementos1}/>
       <ListaClase titulo = "Tareas de clase" icono ="📚" elementos={elementos2}/>
